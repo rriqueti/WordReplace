@@ -54,7 +54,7 @@ class ButtonSaveDiretory(ButtonExcel):
         self.label2.place(x=190,y=152)
 
     def save_file(self, files, file_name):
-        diretory_filename = self.save_file_dialog + "/" + file_name
+        diretory_filename = self.save_file_dialog + "/" + file_name + ".docx"
         print(diretory_filename)
         files.save(diretory_filename) 
         
@@ -96,7 +96,7 @@ class ExecuteButton(ButtonSaveDiretory):
 
         for r in rows:
             """Nome do arquivo salvo, é uma tupla com os valores da primeira e segunda coluna"""
-            file_name = r[0] + " " + r[1] + ".docx"
+            file_name = r[0] + " " + r[1]
             with OpenDoc(exec.word_file_dialog) as files:
                 """Base de dados"""
                 df_excel = data_xlsx.df
