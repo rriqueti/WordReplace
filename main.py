@@ -111,21 +111,12 @@ class ExecuteButton(ButtonSaveDiretory):
                         """Validação se a palavra a ser substituida aparece no pagrafo"""
                         if w in linha.text:
                             linha.text = linha.text.replace(str(w), str(df_excel.loc[contador, w]))
-                    # files.save(f'D:\\ArquivosPython\\WORDREPLACE\\{file_name}.docx') 
                     exec.save_file(files, file_name)
             contador += 1      
 
         self.conclued()
 
-                 
-
-
-
-
-
 exec = ExecuteButton()
-
-
 root.mainloop()
 
 
